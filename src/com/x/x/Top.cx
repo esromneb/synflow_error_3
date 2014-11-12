@@ -1,0 +1,20 @@
+package com.x.x;
+
+network Top {
+	
+	/* 
+	 * How to fix this error:
+	 *   1: only uses non specialized instances
+	 *   2: specialize every version (even if there is only one)
+	 */
+	 
+	 
+	 
+	one = new com.x.x.Integrator({width:16});
+	
+	// this line causes problems, remove it and everything is fine
+	two = new com.x.x.Integrator();
+	
+	// OR, use this version, which gives expected behavior
+	// two = new com.x.x.Integrator({width:64});		
+}
